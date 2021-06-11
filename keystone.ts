@@ -6,8 +6,9 @@ import {
   withItemData,
   statelessSessions,
 } from "@keystone-next/keystone/session";
-import { Product } from "./schemas/Product";
 import { User } from "./schemas/User";
+import { Product } from "./schemas/Product";
+import { ProductImage } from "./schemas/ProductImage";
 
 const databaseURL =
   process.env.DATABASE_URL || "mongodb://localhost/keystone-sick-fits-tutorial";
@@ -44,6 +45,7 @@ export default withAuth(
       // schema items go here
       User,
       Product,
+      ProductImage,
     }),
     ui: {
       // TODO: change this for roles
